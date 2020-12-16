@@ -1,0 +1,38 @@
+.nav
+  >nav
+    ul
+      display: flex
+      flex-flow: row nowrap
+      padding: 0
+      margin: 0
+      // justify-content: space-around
+      li
+        display: flex
+        padding-left: 20px
+        padding-right:  20px
+        justify-content: center
+        align-items: center
+        &:nth-child(1)
+          justify-content: start
+          flex: 1 0 auto
+        &:nth-child(2)
+          display: flex
+          // TODO Сделать брейк для меню
+          // flex-direction: column
+          flex: 5 0 auto
+        &:nth-child(3)
+          flex: 1 0 auto
+        &:nth-child(4)
+          flex: 1 0 auto
+        border: 1px solid green
+        list-style-type: none
+        a
+          display: block
+          &.nav-links
+            display: inline
+          &.logo
+            img
+              // width: 100%
+              height: 100px
+              display: block
+              // margin: auto
