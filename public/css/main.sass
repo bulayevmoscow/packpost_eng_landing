@@ -1,3 +1,20 @@
+// debug
+
+$debug: false
+@if $debug
+  body > *
+    border: 1px solid red
+
+@mixin button_red()
+    color: white
+    background-color: red
+    padding: 13px 61px
+    &:hover
+      color: yellow // TODO сделать ховер
+
+  
+
+
 .nav
   >nav
     ul
@@ -9,7 +26,7 @@
       li
         display: flex
         padding-left: 20px
-        padding-right:  20px
+        padding-right: 20px
         justify-content: center
         align-items: center
         &:nth-child(1)
@@ -24,10 +41,11 @@
           flex: 1 0 auto
         &:nth-child(4)
           flex: 1 0 auto
-        border: 1px solid green
-        list-style-type: none
+          border: 1px solid green
+          list-style-type: none
         a
           display: block
+          color: black
           &.nav-links
             display: inline
           &.logo
@@ -36,3 +54,15 @@
               height: 100px
               display: block
               // margin: auto
+
+.header
+  padding: 189px 140px
+  background: linear-gradient(#112c61bd, #112C61db), url("/public/img/header_bg.jpg") center/cover no-repeat scroll padding-box
+  &-title
+    color: white
+  &-text
+    color: white
+  &-button-red
+    @include button_red
+  > *
+    width: 65% //TODO bp

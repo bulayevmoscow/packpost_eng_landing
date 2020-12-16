@@ -10,8 +10,6 @@
   padding-right: 20px;
   justify-content: center;
   align-items: center;
-  border: 1px solid green;
-  list-style-type: none;
 }
 .nav > nav ul li:nth-child(1) {
   justify-content: start;
@@ -26,9 +24,12 @@
 }
 .nav > nav ul li:nth-child(4) {
   flex: 1 0 auto;
+  border: 1px solid green;
+  list-style-type: none;
 }
 .nav > nav ul li a {
   display: block;
+  color: black;
 }
 .nav > nav ul li a.nav-links {
   display: inline;
@@ -36,6 +37,28 @@
 .nav > nav ul li a.logo img {
   height: 100px;
   display: block;
+}
+
+.header {
+  padding: 189px 140px;
+  background: linear-gradient(#112c61bd, #112C61db), url("/public/img/header_bg.jpg") center/cover no-repeat scroll padding-box;
+}
+.header-title {
+  color: white;
+}
+.header-text {
+  color: white;
+}
+.header-button-red {
+  color: white;
+  background-color: red;
+  padding: 13px 61px;
+}
+.header-button-red:hover {
+  color: yellow;
+}
+.header > * {
+  width: 65%;
 }
 
 /*# sourceMappingURL=main.css.map */
