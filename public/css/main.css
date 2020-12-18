@@ -19,6 +19,9 @@
   display: flex;
   flex: 5 0 auto;
 }
+.nav > nav ul li:nth-child(2) > a:not(:nth-last-child(1)) {
+  margin-right: 5px;
+}
 .nav > nav ul li:nth-child(3) {
   flex: 1 0 auto;
 }
@@ -39,8 +42,17 @@
 }
 
 .header {
-  padding: 189px 140px;
+  padding: 189px 0;
   background: linear-gradient(#112c61bd, #112C61db), url("/public/img/header_bg.jpg") center/cover no-repeat scroll padding-box;
+}
+.header > .custom-row {
+  width: 86%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header > .custom-row > * {
+  max-width: 720px;
+  width: 100%;
 }
 .header-title {
   color: white;
@@ -49,6 +61,8 @@
   color: white;
 }
 .header-button-red {
+  display: inline-flex;
+  width: unset;
   color: white;
   background-color: red;
   padding: 13px 61px;
@@ -58,6 +72,146 @@
 }
 .header > * {
   width: 65%;
+}
+
+.products {
+  margin-top: 73px;
+  margin-bottom: 73px;
+}
+.products > .custom-row {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 86%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.products > .custom-row > * {
+  display: flex;
+  flex-flow: row wrap;
+}
+.products > .custom-row .products-image {
+  flex: 1 1 500px;
+}
+.products > .custom-row .products-image img {
+  max-height: 400px;
+  display: flex;
+  max-width: 100%;
+  width: auto;
+  align-self: flex-end;
+}
+.products > .custom-row .products-text-container {
+  flex: 1 1 500px;
+  margin-left: 16px;
+  align-items: flex-start;
+  justify-content: space-around;
+  display: flex;
+}
+.products > .custom-row .products-text-container .products-text-container-button {
+  display: flex;
+  color: white;
+  background-color: red;
+  padding: 13px 61px;
+}
+.products > .custom-row .products-text-container .products-text-container-button:hover {
+  color: yellow;
+}
+.products > .custom-row .products-offer-text {
+  align-self: center;
+  justify-content: center;
+}
+.products > .custom-row .products-offer-text .products-offer-icons {
+  display: flex;
+  justify-content: space-around;
+  width: 86%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.products > .custom-row .products-offer-text .products-offer-icons .products-offer-icon {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  padding: 2%;
+}
+.products > .custom-row .products-offer-text .products-offer-icons .products-offer-icon .products-offer-icon-img-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+  height: 80px !important;
+  justify-content: center;
+  align-items: center;
+}
+.products > .custom-row .products-offer-text .products-offer-icons .products-offer-icon .products-offer-icon-img-container img {
+  display: block;
+  max-height: 100%;
+  margin: auto;
+}
+.products > .custom-row .products-offer-text .products-offer-icons .products-offer-icon .products-offer-icon-text-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: auto;
+}
+.products > .custom-row .products-offer-text .products-offer-icons .products-offer-icon .products-offer-icon-text-container span {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.catalog > .custom-row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 86%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.catalog > .custom-row > * {
+  display: flex;
+  flex: 1 1 300px;
+  padding: 10px;
+}
+.catalog img {
+  display: flex;
+  width: 100%;
+}
+.catalog .catalog-text {
+  flex-flow: column;
+  align-self: center;
+}
+.catalog .catalog-text-button {
+  align-self: flex-start;
+  color: white;
+  background-color: red;
+  padding: 13px 61px;
+}
+.catalog .catalog-text-button:hover {
+  color: yellow;
+}
+
+.about {
+  overflow: hidden;
+}
+.about .custom-row .about-grid {
+  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 16px;
+  width: 86%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.about .custom-row .about-grid > * {
+  display: flex;
+  flex-direction: column;
+}
+.about .custom-row .about-grid > * img {
+  align-self: center;
+  display: flex;
+  height: 140px;
+  max-width: 178px;
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */

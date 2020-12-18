@@ -2,18 +2,21 @@
 
 $debug: false
 @if $debug
-  body > *
+  body > *:not(svg)
     border: 1px solid red
 
 @mixin button_red()
-    color: white
-    background-color: red
-    padding: 13px 61px
-    &:hover
-      color: yellow // TODO сделать ховер
+  color: white
+  background-color: red
+  padding: 13px 61px
+  &:hover
+    color: yellow // TODO сделать ховер
 
-  
-
+@mixin margin_main($size)
+  $margin: 14 / 100
+  width: 100% - ($margin * 1 * 100%)
+  margin-left: auto
+  margin-right: auto
 
 .nav
   >nav
@@ -37,6 +40,10 @@ $debug: false
           // TODO Сделать брейк для меню
           // flex-direction: column
           flex: 5 0 auto
+          > a
+            &:not(:nth-last-child(1))
+              margin-right: 5px
+
         &:nth-child(3)
           flex: 1 0 auto
         &:nth-child(4)
@@ -55,13 +62,146 @@ $debug: false
               // margin: auto
 
 .header
-  padding: 189px 140px
+  padding: 189px 0
   background: linear-gradient(#112c61bd, #112C61db), url("/public/img/header_bg.jpg") center/cover no-repeat scroll padding-box
+  >.custom-row
+    @include margin_main($size: 1)
+    > *
+      max-width: 720px
+      width: 100%
   &-title
     color: white
   &-text
     color: white
   &-button-red
-    @include button_red
+    display: inline-flex
+    width: unset
+    @include button_red()
   > *
     width: 65% //TODO bp
+
+.products
+  margin-top: 73px
+  margin-bottom: 73px
+  // Элементы наша продукция
+  >.custom-row
+    align-items: center
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    @include margin_main($size: 1)
+    >*
+      display: flex
+      flex-flow: row wrap
+    .products-image
+      flex: 1 1 500px
+      img
+        max-height: 400px
+        display: flex
+        max-width: 100%
+        width: auto
+        // height: auto
+        align-self: flex-end
+    .products-text-container
+      flex: 1 1 500px
+      // max-width: 50%
+      margin-left: 16px
+      align-items: flex-start
+      justify-content: space-around
+      display: flex
+      .products-text-container-header
+        // Заголовок для наших продуктов
+      .products-text-container-description
+        // Описание для наших продуктов
+      .products-text-container-button
+        display: flex
+        @include button_red()
+    // Текст внизу и иконки
+    .products-offer-text
+      align-self: center
+      justify-content: center
+      .products-offer-icons
+        display: flex
+        justify-content: space-around
+        @include margin_main($size: 2)
+        .products-offer-icon
+          display: flex
+          flex-flow: column
+          // justify-content: center
+          align-items: flex-start
+          padding: 2%
+          .products-offer-icon-img-container
+            display: flex
+            width: 100%
+            margin-bottom: 10px
+            height: 80px!important
+            justify-content: center
+            align-items: center
+            img
+              display: block
+              max-height: 100%
+              margin: auto
+          .products-offer-icon-text-container
+            display: flex
+            flex-flow: row wrap
+            justify-content: center
+            margin: auto
+            span
+              display: flex
+              width: 100%
+              justify-content: center
+
+.catalog
+  > .custom-row
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+    @include margin_main($size: 1)
+    > *
+      display: flex
+      flex: 1 1 300px
+      padding: 10px
+  img
+    display: flex
+    width: 100%
+  .catalog-text
+    flex-flow: column
+    align-self: center
+    &-header
+      // 
+    &-description
+      // 
+    &-button
+      align-self: flex-start
+      @include button_red()
+
+.about
+  overflow: hidden
+  .custom-row
+    .about-grid
+      justify-content: space-between    
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      grid-gap: 16px
+      @include margin_main($size: 1)
+      > *
+        display: flex
+        flex-direction: column
+        img
+          align-self: center
+          display: flex
+          height: 140px
+          max-width: 178px
+          margin-bottom: 20px
+        p
+          // 
+
+.background-lines
+  // background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2139.705 2139.705'%3E%3Crect id='Прямоугольник_50' data-name='Прямоугольник 50' width='50' height='200' transform='translate(2081.015) rotate(45)' fill='%23112c61' opacity='0.3'/%3E%3C/svg%3E%0A")
+  // background-size: 100%
+
+body
+  > div:not(.about)
+    // display: none
+*
+  // border: 1px solid green
