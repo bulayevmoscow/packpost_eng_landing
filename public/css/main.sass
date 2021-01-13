@@ -27,7 +27,11 @@ $debug: false
 // lines
 .bg-line
   display: none
-
+.offset-top
+  margin-top: 73px!important
+h2
+  margin-bottom: 30px
+  
 
 .nav
   >nav
@@ -95,8 +99,6 @@ $debug: false
     width: 65% //TODO bp
 
 .products
-  margin-top: 73px
-  margin-bottom: 73px
   // Элементы наша продукция
   >.custom-row
     align-items: center
@@ -109,13 +111,13 @@ $debug: false
       flex-flow: row wrap
     .products-image
       flex: 1 1 500px
+      // justify-content: center
       img
         // max-height: 400px
         display: flex
         max-width: 100%
-        width: auto
-        // height: auto
-        align-self: flex-end
+        width: 100%
+        align-self: strench
     .products-text-container
       flex: 1 1 500px
       // max-width: 50%
@@ -128,8 +130,11 @@ $debug: false
       .products-text-container-description
         // Описание для наших продуктов
       .products-text-container-button
-        display: flex
-        @include button_red()
+        display: block
+        width: 100%
+        >a
+          @include button_red()
+        
     // Текст внизу и иконки
     .products-offer-text
       align-self: center
@@ -245,7 +250,7 @@ $debug: false
       display: flex
       flex-direction: column
       > *
-        margin: 3%
+        margin: 5px 3%
         text-align: center
       input:not(input[type=checkbox]), button
         width: 80%

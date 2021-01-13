@@ -2,6 +2,14 @@
   display: none;
 }
 
+.offset-top {
+  margin-top: 73px !important;
+}
+
+h2 {
+  margin-bottom: 30px;
+}
+
 .nav > nav ul {
   display: flex;
   flex-flow: row nowrap;
@@ -83,10 +91,6 @@
   width: 65%;
 }
 
-.products {
-  margin-top: 73px;
-  margin-bottom: 73px;
-}
 .products > .custom-row {
   align-items: center;
   display: flex;
@@ -106,8 +110,8 @@
 .products > .custom-row .products-image img {
   display: flex;
   max-width: 100%;
-  width: auto;
-  align-self: flex-end;
+  width: 100%;
+  align-self: strench;
 }
 .products > .custom-row .products-text-container {
   flex: 1 1 500px;
@@ -117,12 +121,15 @@
   display: flex;
 }
 .products > .custom-row .products-text-container .products-text-container-button {
-  display: flex;
+  display: block;
+  width: 100%;
+}
+.products > .custom-row .products-text-container .products-text-container-button > a {
   color: white;
   background-color: red;
   padding: 13px 61px;
 }
-.products > .custom-row .products-text-container .products-text-container-button:hover {
+.products > .custom-row .products-text-container .products-text-container-button > a:hover {
   color: yellow;
 }
 .products > .custom-row .products-offer-text {
@@ -262,7 +269,7 @@
   flex-direction: column;
 }
 .footer-contact-form form > * {
-  margin: 3%;
+  margin: 5px 3%;
   text-align: center;
 }
 .footer-contact-form form input:not(input[type=checkbox]), .footer-contact-form form button {

@@ -3,13 +3,17 @@ $color_blue: #1F52B2
 html, body
     font-family: 'Montserrat Alternates', sans-serif
     font-size: 20px
-
+@media (max-width: 700px)
+    html, body
+        font-size: 13px
 body
     h1, h2
         font-size: 2rem
 a:hover
     text-decoration: none
+
 nav
+    // display: none
     li
         a.nav-links
             font-size: 1.25rem
@@ -27,6 +31,8 @@ nav
             font-size: 1rem
             text-align: left
 .header
+    h1
+        font-weight: bold
     a.header-button-red
         font-weight: bold
         font-size: 1rem
@@ -40,3 +46,56 @@ nav
             width: 100%
             font-weight: bold
         &-container-button
+            a
+                font-weight: bold
+                font-size: 1rem 
+    &-offer-text
+        font-weight: bold
+        font-size: 1.25rem 
+    &-offer-icon-text-container
+        color: black
+        font-weight: bold
+        font-size: 1.5rem
+.catalog
+    .custom-row > h2
+        font-size: 2.5rem
+    h2
+        font-weight: bold
+    &-text-description
+        font-size: 1.25rem 
+    &-text-button
+        font-weight: bold
+
+.about
+    h2
+        font-weight: bold
+    p
+        font-size: 1.25rem 
+
+.footer
+    h2
+        font-weight: bold
+    &-contacts
+        a
+            font-weight: bold
+            font-size: 2rem
+    &-nav
+        &-links
+            font-size: 1.25rem
+        &-button
+            font-size: 1rem
+    &-contact-form
+        p
+            color: $color_blue
+            font-size: 1.25rem
+            font-weight: bold
+        input
+            font-size: 1rem
+            font-weight: bold
+            color: $color_blue
+            border: 2px solid $color_red
+        input::placeholder
+            color: inherit
+    &-nav-button, &-contact-button
+        font-size: 1rem
+        font-weight: bold

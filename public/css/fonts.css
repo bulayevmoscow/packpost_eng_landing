@@ -3,6 +3,11 @@ html, body {
   font-size: 20px;
 }
 
+@media (max-width: 700px) {
+  html, body {
+    font-size: 13px;
+  }
+}
 body h1, body h2 {
   font-size: 2rem;
 }
@@ -32,6 +37,9 @@ nav li .nav-email, nav li a.nav-phone > span {
   text-align: left;
 }
 
+.header h1 {
+  font-weight: bold;
+}
 .header a.header-button-red {
   font-weight: bold;
   font-size: 1rem;
@@ -43,6 +51,71 @@ nav li .nav-email, nav li a.nav-phone > span {
 }
 .products-text-container-description {
   width: 100%;
+  font-weight: bold;
+}
+.products-text-container-button a {
+  font-weight: bold;
+  font-size: 1rem;
+}
+.products-offer-text {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+.products-offer-icon-text-container {
+  color: black;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.catalog .custom-row > h2 {
+  font-size: 2.5rem;
+}
+.catalog h2 {
+  font-weight: bold;
+}
+.catalog-text-description {
+  font-size: 1.25rem;
+}
+.catalog-text-button {
+  font-weight: bold;
+}
+
+.about h2 {
+  font-weight: bold;
+}
+.about p {
+  font-size: 1.25rem;
+}
+
+.footer h2 {
+  font-weight: bold;
+}
+.footer-contacts a {
+  font-weight: bold;
+  font-size: 2rem;
+}
+.footer-nav-links {
+  font-size: 1.25rem;
+}
+.footer-nav-button {
+  font-size: 1rem;
+}
+.footer-contact-form p {
+  color: #1F52B2;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+.footer-contact-form input {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #1F52B2;
+  border: 2px solid #D8212B;
+}
+.footer-contact-form input::placeholder {
+  color: inherit;
+}
+.footer-nav-button, .footer-contact-button {
+  font-size: 1rem;
   font-weight: bold;
 }
 
