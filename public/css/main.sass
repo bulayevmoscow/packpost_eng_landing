@@ -1,9 +1,14 @@
 // debug
 
 $debug: false
+// $debug: true
+
 @if $debug
   body > *:not(svg)
     border: 1px solid red
+  *
+    border: 1px solid green
+
 
 @mixin button_red()
   color: white
@@ -17,6 +22,12 @@ $debug: false
   width: 100% - ($margin * 1 * 100%)
   margin-left: auto
   margin-right: auto
+
+
+// lines
+.bg-line
+  display: none
+
 
 .nav
   >nav
@@ -46,20 +57,23 @@ $debug: false
 
         &:nth-child(3)
           flex: 1 0 auto
+          flex-direction: column
+          list-style-type: none
+          align-items: start
         &:nth-child(4)
           flex: 1 0 auto
+          flex-direction: column
           list-style-type: none
+          align-items: start
         a
-          display: block
-          color: black
+          display: flex
+          flex-direction: column
           &.nav-links
             display: inline
           &.logo
             img
-              // width: 100%
               height: 100px
               display: block
-              // margin: auto
 
 .header
   padding: 189px 0
@@ -96,7 +110,7 @@ $debug: false
     .products-image
       flex: 1 1 500px
       img
-        max-height: 400px
+        // max-height: 400px
         display: flex
         max-width: 100%
         width: auto
@@ -200,8 +214,57 @@ $debug: false
   // background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2139.705 2139.705'%3E%3Crect id='Прямоугольник_50' data-name='Прямоугольник 50' width='50' height='200' transform='translate(2081.015) rotate(45)' fill='%23112c61' opacity='0.3'/%3E%3C/svg%3E%0A")
   // background-size: 100%
 
+
+.footer
+  .custom-row
+    display: flex
+    flex-flow: wrap row
+    justify-content: space-between
+    @include margin_main($size: 1)
+    >.footer-header
+      flex: 0 0 100%
+    >*:not(.footer-header)
+      display: flex
+      flex-flow: column
+      flex: 0 0 30%
+      text-align: center
+      justify-content: space-around
+  &-contacts
+    a
+      color: red!important
+  &-nav
+    &-links
+      color: red!important
+    &-button
+      align-self: center
+      @include button_red()
+  &-contact-form
+    p
+      color: blue
+    form
+      display: flex
+      flex-direction: column
+      > *
+        margin: 3%
+        text-align: center
+      input:not(input[type=checkbox]), button
+        width: 80%
+        margin: auto
+      >span
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        text-align: left
+        input
+          margin-right: 0.5rem
+  &-contact-button
+    align-self: center
+    padding: 13px 94px
+    border: unset
+    @include button_red()
+
+
 body
-  > div:not(.about)
+  > div:not(.footer)
     // display: none
-*
-  // border: 1px solid green

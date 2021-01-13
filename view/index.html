@@ -16,7 +16,18 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="/public/css/main.css">
+  <link rel="stylesheet" href="/public/css/fonts.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <style>
+    :root{
+      --font-family-sans-serif: 
+      "Montserrat Alternates'!important"
+    }
+
+  </style>
 </head>
 
 <body class="position-relative mb-5">
@@ -28,17 +39,19 @@
           <a class="logo" href="/"><img src="/public/img/logo.svg" alt="" alt="logo"></a>
         </li>
         <li>
-          <a class="nav-links" href="">Links</a>
-          <a class="nav-links" href="">Links</a>
-          <a class="nav-links" href="">Links</a>
-          <a class="nav-links" href="">Links</a>
+          <a class="nav-links" href="">Навигация</a>
+          <a class="nav-links" href="">Навигация</a>
+          <a class="nav-links" href="">Навигация</a>
+          <a class="nav-links" href="">Навигация</a>
         </li>
         <li>
-          <a href="/">8912391239 <br>бесплатно по России</a>
+          <a class="nav-phone nav-phone-blue" href="/">  8912391239
+            <br><span>Бесплатно по России</span>
+            </a>
         </li>
         <li>
-          <a href="/">8912391239</a>
-          <a href="mailto:">asdkajsd@gmail.com</a>
+          <a class="nav-phone nav-phone-red" href="/">8912391239</a>
+          <a class="nav-email" href="mailto:">asdkajsd@gmail.com</a>
         </li>
 
       </ul>
@@ -59,13 +72,13 @@
       <div>
         <a class="header-button-red" href="">Our products</a>
       </div>
-      <div>kek</div>
     </div>
   </div>
 
 
   <div class="products position-relative">
-    <svg xmlns="http://www.w3.org/2000/svg" width="100vw" height="100vh" viewBox="0 0 2139.705 2139.705" style="
+    <svg class="bg-line bg-line-left" xmlns="http://www.w3.org/2000/svg" width="100vw" height="100vh"
+      viewBox="0 0 2139.705 2139.705" style="
       position: absolute;
       right: 30%;
       top: -45%;
@@ -86,8 +99,8 @@
           the
           production of custom packages, bags and envelopes.
         </p>
-        <div>
-          <a class="products-text-container-button" href>Prices</a>
+        <div class="products-text-container-button">
+          <a href>Prices</a>
         </div>
       </div>
     </div>
@@ -104,7 +117,6 @@
           Envelopes sales is based on customer requests. We offer products for:
         </p>
         <div class="products-offer-icons">
-          <!-- TODO ЗАГРУШКА НА ИКОНКИ -->
           <a href="" class="products-offer-icon">
             <div class="products-offer-icon-img-container">
               <img src="/public/img/icons/gallery.svg" alt="some icon">
@@ -136,6 +148,9 @@
 
   <div class="catalog">
     <div class="custom-row">
+      <h2 class="text-center d-block">Catalog and price</h2>
+    </div>
+    <div class="custom-row">
       <a class="catalog-image">
         <img src="/public/img/photocatalog.jpg" alt="">
       </a>
@@ -166,14 +181,14 @@
             Cumulative system of discounts, special offers for wholesalers and dealers.
           </p>
         </div>
-  
+
         <div class="about-cell">
           <img src="/public/img/icons/clock.svg" alt="">
           <p>
             Short terms of production and shipment.
           </p>
         </div>
-  
+
         <div class="about-cell">
           <img src="/public/img/icons/quality.svg" alt="">
           <p>
@@ -199,15 +214,49 @@
           </p>
         </div>
       </div>
-      <svg xmlns="http://www.w3.org/2000/svg" width="100vw" height="100vh" viewBox="0 0 2139.705 2139.705" style="
+      <svg class="bg-line bg-line-right" xmlns="http://www.w3.org/2000/svg" width="100vw" height="100vh"
+        viewBox="0 0 2139.705 2139.705" style="
       position: absolute;
       right: -40vw;
       top: -50%;
       z-index: -1;
       overflow: hidden;">
-      <rect id="Прямоугольник_50" data-name="Прямоугольник 50" width="83" height="2943"
-        transform="translate(2081.015) rotate(45)" fill="#112c61" opacity="0.4" />
-    </svg>
+        <rect id="Прямоугольник_50" data-name="Прямоугольник 50" width="83" height="2943"
+          transform="translate(2081.015) rotate(45)" fill="#112c61" opacity="0.4" />
+      </svg>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="custom-row">
+      <div class="footer-header text-center">
+        <h2>Contact us</h2>
+      </div>
+      <div class="footer-contacts">
+        <a href="tel:+">31231231313</a>
+        <a href="mailto:">asada@msdafjdsf.com</a>
+        <a>Факс</a>
+        <a href="/" target="_blank" rel="noopener noreferrer">Адрес?</a>
+      </div>
+      <div class="footer-nav">
+        <a href="" class="footer-nav-links">Навигация</a>
+        <a href="" class="footer-nav-links">Навигация</a>
+        <a href="" class="footer-nav-links">Навигация</a>
+        <a href="" class="footer-nav-links">Навигация</a>
+        <a href="" class="footer-nav-links">Навигация</a>
+        <a href="" class="footer-nav-button">Catalog PDF</a>
+      </div>
+      <div class="footer-contact-form">
+        <p>Также вы можете оставить заявку на обратный звонок</p>
+        <form action="" method="post">
+          <!--TODO Запилить движок  -->
+          <input type="text" name="name" placeholder="name" id="" required>
+          <input type="email" name="email" placeholder="email" id="" required>
+          <span><input type="checkbox" name="" id="" required value="123">Согласие на обработку персональных
+            данных</span>
+          <button class="footer-contact-button" type="submit">Send</button>
+        </form>
+      </div>
     </div>
   </div>
 
@@ -219,11 +268,9 @@
 
 
 
-
-
   <!-- debug -->
   <script>const debug = 0;</script>
-  <div id="debug" class="position-absolute" style="
+  <div id="debug" class="position-fixed" style="
     padding: 5px; 
     right: 5px; 
     border: 1px solid red; 

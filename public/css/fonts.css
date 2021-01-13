@@ -1,0 +1,49 @@
+html, body {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-size: 20px;
+}
+
+body h1, body h2 {
+  font-size: 2rem;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+nav li a.nav-links {
+  font-size: 1.25rem;
+  color: #D8212B;
+}
+nav li a.nav-phone {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+nav li a.nav-phone-red {
+  color: #D8212B;
+}
+nav li a.nav-phone-blue {
+  color: #1F52B2;
+}
+nav li .nav-email, nav li a.nav-phone > span {
+  color: #1F52B2;
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.header a.header-button-red {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.products-text-container-header {
+  width: 100%;
+  font-weight: bold;
+}
+.products-text-container-description {
+  width: 100%;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=fonts.css.map */

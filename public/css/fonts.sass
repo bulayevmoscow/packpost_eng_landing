@@ -1,0 +1,42 @@
+$color_red: #D8212B
+$color_blue: #1F52B2
+html, body
+    font-family: 'Montserrat Alternates', sans-serif
+    font-size: 20px
+
+body
+    h1, h2
+        font-size: 2rem
+a:hover
+    text-decoration: none
+nav
+    li
+        a.nav-links
+            font-size: 1.25rem
+            color: $color_red
+        a.nav-phone
+            font-size: 1.5rem
+            font-weight: bold
+            &-red
+                color: $color_red
+            &-blue
+                color: $color_blue
+        .nav-email,a.nav-phone > span 
+            color: $color_blue
+            font-weight: 400
+            font-size: 1rem
+            text-align: left
+.header
+    a.header-button-red
+        font-weight: bold
+        font-size: 1rem
+
+.products
+    &-text
+        &-container-header
+            width: 100%
+            font-weight: bold
+        &-container-description
+            width: 100%
+            font-weight: bold
+        &-container-button
