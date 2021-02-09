@@ -1,6 +1,8 @@
 // debug
 
 $debug: false
+
+$md-width: 960px
 // $debug: true
 
 @if $debug
@@ -142,7 +144,9 @@ h2
       .products-offer-icons
         display: flex
         justify-content: space-around
-        @include margin_main($size: 2)
+        @media (max-width: $md-width)
+          &
+            @include margin_main($size: 2)
         .products-offer-icon
           display: flex
           flex-flow: column
