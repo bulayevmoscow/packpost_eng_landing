@@ -10,6 +10,11 @@ h2 {
   margin-bottom: 30px;
 }
 
+.main {
+  max-width: 1400px;
+  margin: auto;
+}
+
 .nav > nav ul {
   display: flex;
   flex-flow: row nowrap;
@@ -190,6 +195,22 @@ h2 {
   display: flex;
   flex: 1 1 300px;
   padding: 10px;
+}
+.catalog-images {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  flex: 0 1 150px;
+  margin: -15px;
+}
+@media (min-width: 1200px) {
+  .catalog-images {
+    flex-flow: row;
+  }
+}
+.catalog-image {
+  align-items: baseline;
+  margin: 15px;
 }
 .catalog img {
   display: flex;

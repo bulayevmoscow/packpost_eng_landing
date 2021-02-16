@@ -35,6 +35,10 @@ h2
   margin-bottom: 30px
   
 
+.main
+  max-width: 1400px
+  margin: auto
+
 .nav
   >nav
     ul
@@ -184,6 +188,20 @@ h2
       display: flex
       flex: 1 1 300px
       padding: 10px
+  &-images
+    display: flex
+    flex-direction: column
+    align-self: center
+    flex: 0 1 150px
+    margin: -15px
+    @media (min-width: 1200px)
+      &
+        flex-flow: row
+  &-image
+    align-items: baseline
+    margin: 15px
+    &:last-child
+      // padding-left: 10px
   img
     display: flex
     width: 100%
