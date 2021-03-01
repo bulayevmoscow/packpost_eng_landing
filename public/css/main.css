@@ -6,20 +6,22 @@
   margin-top: 73px !important;
 }
 
-h2 {
-  margin-bottom: 30px;
-}
-
 .main {
   max-width: 1400px;
   margin: auto;
 }
 
+.nav {
+  margin: 0px 1vw;
+}
 .nav > nav ul {
   display: flex;
   flex-flow: row nowrap;
   padding: 0;
   margin: 0;
+}
+.nav > nav ul a {
+  align-self: center;
 }
 .nav > nav ul li {
   display: flex;
@@ -71,6 +73,7 @@ h2 {
   width: 86%;
   margin-left: auto;
   margin-right: auto;
+  max-width: 1200px !important;
 }
 .header > .custom-row > * {
   max-width: 720px;
@@ -119,17 +122,25 @@ h2 {
   align-self: strench;
 }
 .products > .custom-row .products-text-container {
-  flex: 1 1 500px;
-  margin-left: 16px;
+  flex: 1 1 400px;
+  margin: 10px 0 0 0px;
   align-items: flex-start;
   justify-content: space-around;
   display: flex;
 }
+.products > .custom-row .products-text-container > * {
+  margin: 8px 0;
+}
+@media screen and (min-width: 1100px) {
+  .products > .custom-row .products-text-container {
+    margin: 0 0 0 16px;
+  }
+}
 .products > .custom-row .products-text-container .products-text-container-button {
-  display: block;
-  width: 100%;
+  margin-right: auto;
 }
 .products > .custom-row .products-text-container .products-text-container-button > a {
+  display: block;
   color: white;
   background-color: red;
   padding: 13px 61px;
@@ -183,6 +194,9 @@ h2 {
   justify-content: center;
 }
 
+.catalog h2 {
+  margin-bottom: 1.2rem;
+}
 .catalog > .custom-row {
   display: flex;
   flex-flow: row wrap;
@@ -233,6 +247,9 @@ h2 {
 .about {
   overflow: hidden;
 }
+.about .custom-row h2 {
+  margin-bottom: 2rem;
+}
 .about .custom-row .about-grid {
   justify-content: space-between;
   display: grid;
@@ -253,74 +270,96 @@ h2 {
   max-width: 178px;
   margin-bottom: 20px;
 }
-.footer .custom-row {
-  display: flex;
-  flex-flow: wrap row;
-  justify-content: space-between;
-  width: 86%;
-  margin-left: auto;
-  margin-right: auto;
-}
-.footer .custom-row > .footer-header {
-  flex: 0 0 100%;
-}
-.footer .custom-row > *:not(.footer-header) {
-  display: flex;
-  flex-flow: column;
-  flex: 0 0 30%;
-  text-align: center;
-  justify-content: space-around;
-}
-.footer-contacts a {
-  color: red !important;
-}
-.footer-nav-links {
-  color: red !important;
-}
-.footer-nav-button {
-  align-self: center;
+.footer {
+  background: #112c61bd;
   color: white;
-  background-color: red;
-  padding: 13px 61px;
 }
-.footer-nav-button:hover {
-  color: yellow;
+.footer * {
+  transition: 0.7s;
 }
-.footer-contact-form p {
-  color: blue;
+.footer p {
+  margin-bottom: 0;
 }
-.footer-contact-form form {
-  display: flex;
-  flex-direction: column;
-}
-.footer-contact-form form > * {
-  margin: 5px 3%;
-  text-align: center;
-}
-.footer-contact-form form input:not(input[type=checkbox]), .footer-contact-form form button {
-  width: 80%;
+.footer-container {
+  padding: 73px;
+  max-width: 1200px;
   margin: auto;
 }
-.footer-contact-form form > span {
+.footer-container-form {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  padding: 1rem 0px;
+  margin-top: -0.6rem;
+  margin-bottom: -0.6rem;
+}
+.footer-container-form > * {
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+.footer-container-form input {
+  transition: 0.2s;
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+  background: transparent;
+  border: 1px solid white;
+  padding: 10px;
+  color: inherit;
+}
+.footer-container-form input:focus {
+  font-weight: bold;
+  border: 1px solid white;
+  outline: none;
+}
+.footer-container-form input::placeholder {
+  color: white;
+}
+.footer-container-form button {
+  display: flex;
+  background: white !important;
+  color: black !important;
+  border: none;
+  border-radius: 3px 3px;
+  padding: 10px 37px;
+}
+.footer-container-form button:focus {
+  outline: none;
+}
+.footer-container-form button:hover {
+  opacity: 0.7;
+}
+
+.footer-advanced {
+  background: #1e3052;
+  color: white;
+}
+.footer-advanced ul {
+  padding: 0;
+  list-style-type: none;
+}
+.footer-advanced-container {
+  padding: 35px 0px 20px 0;
+  max-width: 1200px;
+  margin: auto;
+}
+.footer-advanced-container ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
-  text-align: left;
+  margin: 0px -16px;
 }
-.footer-contact-form form > span input {
-  margin-right: 0.5rem;
+.footer-advanced-container ul li {
+  display: flex;
+  flex-flow: column;
+  margin: 0 16px;
 }
-.footer-contact-button {
-  align-self: center;
-  padding: 13px 94px;
-  border: unset;
+.footer-advanced-container ul li a {
   color: white;
-  background-color: red;
-  padding: 13px 61px;
 }
-.footer-contact-button:hover {
-  color: yellow;
+
+html {
+  height: 6000px;
 }
 
 /*# sourceMappingURL=main.css.map */

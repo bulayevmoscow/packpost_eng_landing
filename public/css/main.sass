@@ -32,7 +32,7 @@ $md-width: 960px
 .offset-top
   margin-top: 73px!important
 h2
-  margin-bottom: 30px
+  // margin-bottom: 30px
   
 
 .main
@@ -40,6 +40,7 @@ h2
   margin: auto
 
 .nav
+  margin: 0px 1vw
   >nav
     ul
       display: flex
@@ -47,6 +48,8 @@ h2
       padding: 0
       margin: 0
       // justify-content: space-around
+      a
+        align-self: center
       li
         display: flex
         padding-left: 20px
@@ -90,6 +93,7 @@ h2
   background: linear-gradient(#112c61bd, #112C61db), url("/public/img/header_bg.jpg") center/cover no-repeat scroll padding-box
   >.custom-row
     @include margin_main($size: 1)
+    max-width: 1200px!important
     > *
       max-width: 720px
       width: 100%
@@ -125,9 +129,14 @@ h2
         width: 100%
         align-self: strench
     .products-text-container
-      flex: 1 1 500px
+      flex: 1 1 400px
+      margin: 10px 0 0 0px
       // max-width: 50%
-      margin-left: 16px
+      > *
+        margin: 8px 0
+      @media screen and ( min-width: 1100px )
+        &
+          margin: 0 0 0 16px
       align-items: flex-start
       justify-content: space-around
       display: flex
@@ -136,9 +145,9 @@ h2
       .products-text-container-description
         // Описание для наших продуктов
       .products-text-container-button
-        display: block
-        width: 100%
+        margin-right: auto
         >a
+          display: block
           @include button_red()
         
     // Текст внизу и иконки
@@ -179,6 +188,8 @@ h2
               justify-content: center
 
 .catalog
+  h2
+    margin-bottom: 1.2rem
   > .custom-row
     display: flex
     flex-flow: row wrap
@@ -219,6 +230,8 @@ h2
 .about
   overflow: hidden
   .custom-row
+    h2
+      margin-bottom: 2rem
     .about-grid
       justify-content: space-between    
       display: grid
@@ -242,56 +255,131 @@ h2
   // background-size: 100%
 
 
-.footer
-  .custom-row
-    display: flex
-    flex-flow: wrap row
-    justify-content: space-between
-    @include margin_main($size: 1)
-    >.footer-header
-      flex: 0 0 100%
-    >*:not(.footer-header)
-      display: flex
-      flex-flow: column
-      flex: 0 0 30%
-      text-align: center
-      justify-content: space-around
-  &-contacts
-    a
-      color: red!important
-  &-nav
-    &-links
-      color: red!important
-    &-button
-      align-self: center
-      @include button_red()
-  &-contact-form
-    p
-      color: blue
-    form
-      display: flex
-      flex-direction: column
-      > *
-        margin: 5px 3%
-        text-align: center
-      input:not(input[type=checkbox]), button
-        width: 80%
-        margin: auto
-      >span
-        display: flex
-        flex-direction: row
-        justify-content: center
-        align-items: center
-        text-align: left
-        input
-          margin-right: 0.5rem
-  &-contact-button
-    align-self: center
-    padding: 13px 94px
-    border: unset
-    @include button_red()
+// .footer
+//   .custom-row
+//     display: flex
+//     flex-flow: wrap row
+//     justify-content: space-between
+//     @include margin_main($size: 1)
+//     >.footer-header
+//       flex: 0 0 100%
+//     >*:not(.footer-header)
+//       display: flex
+//       flex-flow: column
+//       flex: 0 0 30%
+//       text-align: center
+//       justify-content: space-around
+//   &-contacts
+//     a
+//       color: red!important
+//   &-nav
+//     &-links
+//       color: red!important
+//     &-button
+//       align-self: center
+//       @include button_red()
+//   &-contact-form
+//     p
+//       color: blue
+//     form
+//       display: flex
+//       flex-direction: column
+//       > *
+//         margin: 5px 3%
+//         text-align: center
+//       input:not(input[type=checkbox]), button
+//         width: 80%
+//         margin: auto
+//       >span
+//         display: flex
+//         flex-direction: row
+//         justify-content: center
+//         align-items: center
+//         text-align: left
+//         input
+//           margin-right: 0.5rem
+//   &-contact-button
+//     align-self: center
+//     padding: 13px 94px
+//     border: unset
+//     @include button_red()
 
+.footer
+  background: #112c61bd
+  color: white
+  *
+    transition: .7s
+  p
+    margin-bottom: 0
+  &-container
+    padding: 73px
+    max-width: 1200px
+    margin: auto
+    &-form
+      display: flex
+      flex-flow: column nowrap
+      align-items: center
+      padding: 1rem 0px
+      margin-top: -0.6rem
+      margin-bottom:-0.6rem
+      > * 
+        margin-top: 0.6rem
+        margin-bottom: 0.6rem
+      input
+        transition: .2s
+        display: flex
+        width: 100%
+        max-width: 600px
+        background: transparent
+        border: 1px solid white
+        padding: 10px
+        color: inherit
+        &:focus
+          font-weight: bold
+          border: 1px solid white
+          outline: none
+        &::placeholder
+          color: white
+      button
+        display: flex
+        background: white !important
+        color: black!important
+        border: none
+        border-radius: 3px 3px
+        padding: 10px 37px
+        
+        &:focus
+          outline: none
+        &:hover
+          opacity: 0.7
+      
+.footer-advanced
+  background: #1e3052
+  color: white
+  ul
+    padding: 0
+    list-style-type: none
+  &-container
+    padding: 35px 0px 20px 0
+    max-width: 1200px
+    margin: auto
+    ul
+      display: flex
+      flex-direction: row
+      justify-content: center
+      margin:  0px -16px
+      li
+        display: flex
+        // flex-basis: content
+        flex-flow: column
+        margin: 0 16px
+        a
+          color: white
+          
 
 body
   > div:not(.footer)
     // display: none
+
+html
+  height: 6000px
